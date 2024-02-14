@@ -1,0 +1,13 @@
+version: '3.3'
+ 
+services:
+  activemq:
+    image: webcenter/activemq:5.13.2
+    restart: always
+    ports:
+      - 8161:8161
+      - 61616:61616
+      - 61613:61613
+    environment:
+      ACTIVEMQ_ADMIN_LOGIN: user
+      ACTIVEMQ_ADMIN_PASSWORD: pass
